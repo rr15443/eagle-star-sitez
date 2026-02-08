@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eagle Star Security Solutions LLC | Armed & Unarmed Security | Sumter, SC</title>
+
+  <meta name="description" content="Eagle Star Security Solutions LLC provides armed and unarmed security officers and professional security training in South Carolina. Your safety is our mission." />
+  <link rel="icon" href="assets/img/logo.png" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Eagle Star Security Solutions LLC" />
+  <meta property="og:description" content="Armed & Unarmed Security Officers • Security Training • CPR Training — Sumter, SC" />
+  <meta property="og:image" content="assets/img/logo.png" />
+  <meta property="og:type" content="website" />
+
+  <!-- Local Business Schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"Eagle Star Security Solutions LLC",
+    "description":"Armed and unarmed security officers and professional security training in South Carolina.",
+    "telephone":"+1-803-961-1923",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"529 Oxford St",
+      "addressLocality":"Sumter",
+      "addressRegion":"SC",
+      "postalCode":"29150",
+      "addressCountry":"US"
+    },
+    "areaServed":["South Carolina"],
+    "url":"https://yourdomain.com"
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="container inner">
+      <div class="left">
+        <a class="toplink" href="tel:+18039611923">📞 (803) 961-1923</a>
+        <span class="dot"></span>
+        <a class="toplink" href="mailto:eglstrss@gmail.com">✉️ eglstrss@gmail.com</a>
+      </div>
+      <div class="right">
+        <span class="toplink">🕒 Reliable Coverage • Professional Officers</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container inner">
+      <a class="brand" href="index.html" aria-label="Go to homepage">
+        <img src="assets/img/logo-eagle-star.png"
+             alt="Eagle Star Security logo"
+             class="logo-img" />
+        <div class="name">
+          <strong>Eagle Star Security</strong>
+          <small>Armed • Unarmed • Training</small>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html" class="active">Home</a>
+        <a href="services.html">Services</a>
+        <a href="training.html">Training</a>
+        <a href="about.html">About</a>
+        <a href="quote.html">Request a Quote</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="actions">
+        <button class="btn ghost" id="openSearch" type="button" aria-label="Search (Ctrl+K)">🔎 Search</button>
+        <a class="btn primary" href="quote.html">Get a Quote</a>
+        <button class="burger" id="openDrawer" type="button" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer" id="drawer" aria-hidden="true">
+    <div class="panel" role="dialog" aria-label="Mobile menu">
+      <div class="row">
+        <div class="brand" style="min-width:auto">
+          <img src="assets/img/logo.png" alt="Eagle Star logo" style="width:44px;height:44px;border-radius:14px;object-fit:cover;border:1px solid rgba(255,255,255,.14);" />
+          <div class="name">
+            <strong>Eagle Star Security</strong>
+            <small>Sumter, SC</small>
+          </div>
+        </div>
+        <button class="btn" id="closeDrawer" type="button">✕</button>
+      </div>
+
+      <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="training.html">Training</a>
+        <a href="about.html">About</a>
+        <a href="quote.html">Request a Quote</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="sitemap.html">Sitemap</a>
+      </div>
+
+      <div class="footer">
+        <button class="btn ghost" id="openSearchMobile" type="button">🔎 Search</button>
+        <a class="btn primary" href="quote.html">Get a Quote</a>
+        <a class="btn" href="tel:+18039611923">Call Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search Modal -->
+  <div class="search-modal" id="searchModal" aria-hidden="true">
+    <div class="box" role="dialog" aria-label="Search">
+      <div class="top">
+        <strong>Search the website</strong>
+        <button class="btn" id="closeSearch" type="button">✕</button>
+      </div>
+      <div class="results">
+        <input id="searchInput" type="text" placeholder="Type to search (ex: armed, training, quote)..." aria-label="Search input" />
+        <div id="searchResults" class="grid" style="gap:10px"></div>
+        <small>Tip: Press <strong>Ctrl+K</strong> anytime to open search.</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Slider -->
+  <section class="hero">
+    <div class="container">
+      <div class="slider" id="slider" role="region" aria-label="Hero slider">
+        <div class="slides">
+
+          <!-- Slide 1 -->
+          <div class="slide" id="slide-1" aria-hidden="false">
+            <div class="bg" style="background-image:url('assets/img/hero1.jpg')"></div>
+            <div class="content">
+              <div class="hero-grid">
+                <div>
+                  <span class="badge">✅ Highly Trained • Vetted • Professional</span>
+                  <h1>Your safety is our mission.</h1>
+                  <p class="lead">
+                    At <strong>Eagle Star Security Solutions LLC</strong>, we provide <strong>unarmed officers</strong>,
+                    <strong>armed security</strong>, and <strong>professional security training</strong>—delivering protection
+                    you can see and trust.
+                  </p>
+                  <div class="cta">
+                    <a class="btn primary" href="quote.html">Request a Quote</a>
+                    <a class="btn" href="services.html">Explore Services</a>
+                    <a class="btn ghost" href="tel:+18039611923">Call (803) 961-1923</a>
+                  </div>
+                </div>
+
+                <div class="mini">
+                  <div class="mini-card">
+                    <strong>Unarmed Officers</strong>
+                    <p>Visible presence to deter crime, maintain order, and protect people + property.</p>
+                  </div>
+                  <div class="mini-card">
+                    <strong>Armed Officers</strong>
+                    <p>Licensed and trained for higher-risk environments, threat detection, and emergency response.</p>
+                  </div>
+                  <div class="mini-card">
+                    <strong>Training & Certifications</strong>
+                    <p>Safeguard training for unarmed/armed + CPR training by a licensed instructor.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="slide" id="slide-2" aria-hidden="true">
+            <!-- FIXED: hero2 is .jpeg -->
+            <div class="bg" style="background-image:url('assets/img/hero2.jpeg')"></div>
+            <div class="content">
+              <div class="hero-grid">
+                <div>
+                  <span class="badge">🧠 Discipline • Integrity • Confidence</span>
+                  <h1>Professional security officers who represent your business the right way.</h1>
+                  <p class="lead">
+                    Every Eagle Star officer—armed or unarmed—is carefully selected, thoroughly vetted,
+                    and trained to respond with confidence and professionalism.
+                  </p>
+                  <div class="cta">
+                    <a class="btn primary" href="services.html">View Services</a>
+                    <a class="btn" href="contact.html">Talk to Us</a>
+                  </div>
+                </div>
+
+                <div class="mini">
+                  <div class="mini-card">
+                    <strong>Observation & Reporting</strong>
+                    <p>Accurate documentation and clear communication.</p>
+                  </div>
+                  <div class="mini-card">
+                    <strong>De-escalation</strong>
+                    <p>Conflict de-escalation and situational awareness training.</p>
+                  </div>
+                  <div class="mini-card">
+                    <strong>Customer Service</strong>
+                    <p>Professional conduct that supports your staff and customers.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="slide" id="slide-3" aria-hidden="true">
+            <!-- FIXED: hero3 is .webp -->
+            <div class="bg" style="background-image:url('assets/img/hero3.webp')"></div>
+            <div class="content">
+              <div class="hero-grid">
+                <div>
+                  <span class="badge">🎓 Training That Builds Real-World Readiness</span>
+                  <h1>We don’t just provide guards — we train them.</h1>
+                  <p class="lead">
+                    Expert-level <strong>Safeguard Training</strong> for both unarmed and armed officers, covering
+                    use of force understanding, report writing, situational awareness, and professional communication.
+                  </p>
+                  <div class="cta">
+                    <a class="btn primary" href="training.html">Training Programs</a>
+                    <a class="btn" href="quote.html">Get Pricing</a>
+                  </div>
+                </div>
+
+                <div class="mini">
+                  <div class="mini-card">
+                    <strong>SC Standards</strong>
+                    <p>Training aligned with South Carolina standards for officers.</p>
+                  </div>
+                  <div class="mini-card">
+                    <strong>CPR Training</strong>
+                    <p>CPR & basic life support training taught by a licensed instructor.</p>
+                  </div>
+                  <div class="mini-card">
+                    <strong>Job-Ready Outcomes</strong>
+                    <p>Prepared, confident, and ready to perform on the job.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="slide" id="slide-4" aria-hidden="true">
+            <!-- FIXED: hero4 is .jpeg -->
+            <div class="bg" style="background-image:url('assets/img/hero4.jpeg')"></div>
+            <div class="content">
+              <div class="hero-grid">
+                <div>
+                  <span class="badge">🛡️ Coverage Built For Your Site</span>
+                  <h1>Custom coverage for businesses, events, and communities.</h1>
+                  <p class="lead">
+                    We tailor staffing, post orders, reporting, and schedules to match your risk level and needs —
+                    so you get protection that’s consistent and accountable.
+                  </p>
+                  <div class="cta">
+                    <a class="btn primary" href="quote.html">Request Coverage</a>
+                    <a class="btn" href="services.html">See Service Types</a>
+                  </div>
+                </div>
+
+                <div class="mini">
+                  <div class="mini-card">
+                    <strong>Visible Deterrence</strong>
+                    <p>Professional presence that reduces incidents and improves safety.</p>
+                  </div>
+                  <div class="mini-card">
+                    <strong>Clear Reporting</strong>
+                    <p>Daily activity and incident reporting when requested.</p>
+                  </div>
+                  <div class="mini-card">
+                    <strong>Rapid Response</strong>
+                    <p>Trained to de-escalate and respond quickly to situations.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="slider-controls">
+          <div class="pills" role="tablist" aria-label="Slide indicators">
+            <button class="pill active" type="button" aria-label="Go to slide 1"></button>
+            <button class="pill" type="button" aria-label="Go to slide 2"></button>
+            <button class="pill" type="button" aria-label="Go to slide 3"></button>
+            <button class="pill" type="button" aria-label="Go to slide 4"></button>
+          </div>
+          <div class="arrows">
+            <button class="btn" id="prevSlide" type="button" aria-label="Previous slide">←</button>
+            <button class="btn" id="nextSlide" type="button" aria-label="Next slide">→</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Service Cards -->
+  <section class="section tight">
+    <div class="container">
+      <div class="kicker">
+        <div>
+          <h2>Security Services You Can Trust</h2>
+          <p>Unarmed coverage, armed protection, and training built on discipline and integrity.</p>
+        </div>
+        <div class="right">
+          <a class="btn" href="services.html">All Services</a>
+          <a class="btn ghost" href="training.html">Training</a>
+        </div>
+      </div>
+
+      <div class="grid three">
+        <div class="card hover">
+          <div class="icon">🛡️</div>
+          <h3>Unarmed Security Officers</h3>
+          <p>Strong visible presence to deter crime, maintain order, and protect employees, customers, and assets.</p>
+        </div>
+
+        <div class="card hover">
+          <div class="icon">⭐</div>
+          <h3>Armed Security Officers</h3>
+          <p>Licensed and trained for elevated protection needs, threat detection, and emergency response.</p>
+        </div>
+
+        <div class="card hover">
+          <div class="icon">🎓</div>
+          <h3>Training & Certifications</h3>
+          <p>Safeguard training for armed/unarmed officers plus CPR training by a licensed instructor.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Preview -->
+  <section class="section">
+    <div class="container">
+      <div class="grid two">
+        <div class="card">
+          <h2>Why Eagle Star</h2>
+          <p>
+            We provide highly trained, reliable, and professional security officers prepared to safeguard your business,
+            property, and people with excellence. Our officers are selected, vetted, and trained to respond with confidence,
+            discipline, and integrity.
+          </p>
+
+          <ul class="list">
+            <li>Professional conduct + customer service mindset</li>
+            <li>Observation, reporting, and situational awareness</li>
+            <li>Conflict de-escalation fundamentals</li>
+            <li>Training-first culture</li>
+          </ul>
+
+          <div class="hr"></div>
+          <div class="cta">
+            <a class="btn primary" href="quote.html">Request a Quote</a>
+            <a class="btn" href="about.html">Learn More</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Contact</h2>
+          <p><strong>Owner:</strong> Marcus Montgomery</p>
+          <p><strong>Phone:</strong> <a href="tel:+18039611923">(803) 961-1923</a></p>
+          <p><strong>Address:</strong> 529 Oxford St, Sumter, SC 29150</p>
+
+          <div class="hr"></div>
+
+          <form class="form" data-form>
+            <div class="toast" aria-live="polite"></div>
+
+            <div class="field">
+              <label for="cName">Name</label>
+              <input id="cName" name="name" type="text" placeholder="Your name" required />
+            </div>
+
+            <div class="field">
+              <label for="cPhone">Phone</label>
+              <input id="cPhone" name="phone" type="tel" placeholder="(###) ###-####" required />
+            </div>
+
+            <div class="field">
+              <label for="cMessage">What do you need?</label>
+              <textarea id="cMessage" name="message" placeholder="Tell us what type of coverage or training you need..." required></textarea>
+              <div class="helper">Demo form — we’ll connect it to email later (Formspree / Netlify / server).</div>
+            </div>
+
+            <button class="btn primary" type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Credentials / Compliance -->
+  <section class="credentials">
+    <div class="container">
+      <span class="badge">✅ Licensed &amp; Compliant</span>
+      <h2>South Carolina Compliance</h2>
+      <p class="lead">
+        Eagle Star Security Solutions LLC follows South Carolina standards for professional conduct,
+        training, and reporting. Our operations prioritize safety, accountability, and lawful service.
+      </p>
+
+      <div class="credential-logos">
+        <div class="cred-card">
+          <img src="assets/img/logo-sled.png" alt="South Carolina Law Enforcement Division (SLED)" />
+          <div class="cred-text">
+            <strong>South Carolina Law Enforcement Division</strong>
+            <small>Regulatory awareness &amp; compliance</small>
+          </div>
+        </div>
+      </div>
+
+      <p class="fineprint">
+        Displayed for informational purposes only. Eagle Star Security Solutions LLC is a private company
+        and is not affiliated with or endorsed by any government agency.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="cols">
+        <div>
+          <div class="brand" style="min-width:auto; margin-bottom:10px">
+            <img src="assets/img/logo-eagle-star.png"
+     alt="Eagle Star Security logo"
+     style="width:56px;height:56px;border-radius:14px;object-fit:contain;border:1px solid rgba(255,255,255,.14);" />
+            <div class="name">
+              <strong>Eagle Star Security Solutions LLC</strong>
+              <small>Armed • Unarmed • Training</small>
+            </div>
+          </div>
+          <p>
+            Protection you can see and trust — professional officers and training built on confidence,
+            discipline, and integrity.
+          </p>
+        </div>
+
+        <div>
+          <h3>Pages</h3>
+          <p><a href="services.html">Services</a></p>
+          <p><a href="training.html">Training</a></p>
+          <p><a href="about.html">About</a></p>
+          <p><a href="contact.html">Contact</a></p>
+        </div>
+
+        <div>
+          <h3>Get Started</h3>
+          <p><a href="quote.html">Request a Quote</a></p>
+          <p><a href="careers.html">Careers</a></p>
+          <p><a href="privacy.html">Privacy</a></p>
+          <p><a href="sitemap.html">Sitemap</a></p>
+        </div>
+
+        <div>
+          <h3>Contact</h3>
+          <p><a href="tel:+18039611923">📞 (803) 961-1923</a></p>
+          <p>📍 529 Oxford St, Sumter, SC 29150</p>
+          <p><a href="mailto:eglstrss@gmail.com">✉️ eglstrss@gmail.com</a></p>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <small>© <span id="year"></span> Eagle Star Security Solutions LLC. All rights reserved.</small>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

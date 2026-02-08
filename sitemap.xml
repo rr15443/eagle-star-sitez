@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://yourdomain.com/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://yourdomain.com/services.html</loc>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://yourdomain.com/training.html</loc>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://yourdomain.com/about.html</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://yourdomain.com/quote.html</loc>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://yourdomain.com/contact.html</loc>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://yourdomain.com/careers.html</loc>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://yourdomain.com/privacy.html</loc>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://yourdomain.com/sitemap.html</loc>
+    <priority>0.40</priority>
+  </url>
+
+</urlset>

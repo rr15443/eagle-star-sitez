@@ -1,0 +1,805 @@
+/* ================================
+   Global / Theme
+================================ */
+:root{
+  --bg: #0b1220;
+  --panel: #0f1a2f;
+  --card: rgba(255,255,255,.06);
+  --card2: rgba(255,255,255,.09);
+  --text: #e8eefc;
+  --muted: rgba(232,238,252,.72);
+  --brand: #2dd4bf;
+  --brand2: #60a5fa;
+  --danger: #fb7185;
+  --shadow: 0 18px 50px rgba(0,0,0,.45);
+  --shadow2: 0 12px 28px rgba(0,0,0,.35);
+  --ring: 0 0 0 3px rgba(45,212,191,.25);
+  --radius: 18px;
+  --radius2: 24px;
+  --max: 1180px;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  color: var(--text);
+  background:
+    radial-gradient(1200px 900px at 20% 15%, rgba(96,165,250,.22), transparent 55%),
+    radial-gradient(1000px 800px at 90% 10%, rgba(45,212,191,.18), transparent 55%),
+    radial-gradient(900px 700px at 30% 95%, rgba(251,113,133,.12), transparent 55%),
+    var(--bg);
+  min-height:100vh;
+}
+
+a{color:inherit; text-decoration:none}
+img{max-width:100%; display:block}
+.container{max-width: var(--max); margin:0 auto; padding: 0 18px}
+.section{padding: 72px 0}
+.section.tight{padding: 52px 0}
+h1,h2,h3{margin:0 0 10px}
+p{margin: 0 0 12px; color: var(--muted); line-height:1.6}
+small{color: var(--muted)}
+
+.badge{
+  display:inline-flex;
+  gap:10px;
+  align-items:center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(45,212,191,.16), rgba(96,165,250,.14));
+  border: 1px solid rgba(255,255,255,.12);
+  color: var(--text);
+  font-weight: 600;
+  letter-spacing:.2px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding: 12px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.06);
+  color: var(--text);
+  font-weight: 700;
+  cursor:pointer;
+  transition: transform .18s ease, background .18s ease, border-color .18s ease;
+}
+.btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.10); border-color: rgba(255,255,255,.2)}
+.btn.primary{
+  background: linear-gradient(90deg, rgba(45,212,191,.95), rgba(96,165,250,.92));
+  color:#06101f;
+  border-color: transparent;
+}
+.btn.primary:hover{filter: brightness(1.05)}
+.btn.ghost{background: transparent}
+.btn.danger{background: rgba(251,113,133,.12); border-color: rgba(251,113,133,.35)}
+.btn:focus-visible{outline:none; box-shadow: var(--ring)}
+
+.grid{display:grid; gap:18px}
+.grid.two{grid-template-columns: repeat(2, minmax(0, 1fr))}
+.grid.three{grid-template-columns: repeat(3, minmax(0, 1fr))}
+.grid.four{grid-template-columns: repeat(4, minmax(0, 1fr))}
+@media (max-width: 980px){
+  .grid.two,.grid.three,.grid.four{grid-template-columns: 1fr}
+}
+
+.card{
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow2);
+  padding: 18px;
+  overflow:hidden;
+  position:relative;
+}
+.card.hover{
+  transition: transform .22s ease, border-color .22s ease, background .22s ease;
+}
+.card.hover:hover{
+  transform: translateY(-4px);
+  border-color: rgba(45,212,191,.35);
+  background: rgba(255,255,255,.085);
+}
+
+/* ================================
+   Topbar + Header
+================================ */
+.topbar{
+  background: rgba(0,0,0,.35);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.topbar .inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding: 10px 0;
+}
+.topbar .left, .topbar .right{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+.toplink{
+  display:inline-flex; gap:8px; align-items:center;
+  color: var(--muted);
+  font-weight:600;
+}
+.dot{
+  width:6px; height:6px; border-radius:50%;
+  background: rgba(255,255,255,.22);
+}
+
+.header{
+  position: sticky;
+  top:0;
+  z-index:50;
+  backdrop-filter: blur(10px);
+  background: rgba(11,18,32,.72);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.header .inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  padding: 14px 0;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  min-width: 180px;
+}
+.brand .logo{
+  width: 40px; height: 40px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(45,212,191,.9), rgba(96,165,250,.88));
+  box-shadow: 0 10px 20px rgba(0,0,0,.25);
+  display:grid;
+  place-items:center;
+  color:#06101f;
+  font-weight: 900;
+}
+.brand .name{
+  display:flex;
+  flex-direction:column;
+  line-height:1.1;
+}
+.brand .name strong{letter-spacing:.4px}
+.brand .name small{margin-top:2px}
+
+.nav{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+}
+.nav a{
+  padding: 10px 12px;
+  border-radius: 999px;
+  color: var(--muted);
+  font-weight: 700;
+  border: 1px solid transparent;
+  transition: background .18s ease, border-color .18s ease, color .18s ease;
+}
+.nav a:hover{
+  background: rgba(255,255,255,.06);
+  border-color: rgba(255,255,255,.10);
+  color: var(--text);
+}
+.nav a.active{
+  background: rgba(45,212,191,.12);
+  border-color: rgba(45,212,191,.28);
+  color: var(--text);
+}
+
+.header .actions{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+.burger{
+  display:none;
+  width: 44px; height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.06);
+  color: var(--text);
+  cursor:pointer;
+}
+.burger:focus-visible{outline:none; box-shadow: var(--ring)}
+@media (max-width: 980px){
+  .nav{display:none}
+  .burger{display:inline-flex; align-items:center; justify-content:center}
+}
+
+/* Mobile drawer */
+.drawer{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.55);
+  display:none;
+  z-index: 100;
+}
+.drawer.open{display:block}
+.drawer .panel{
+  position:absolute;
+  right:0; top:0; bottom:0;
+  width: min(420px, 92vw);
+  background: rgba(11,18,32,.95);
+  border-left: 1px solid rgba(255,255,255,.10);
+  padding: 18px;
+}
+.drawer .panel .row{
+  display:flex; align-items:center; justify-content:space-between;
+  gap:12px;
+}
+.drawer .menu{
+  margin-top: 14px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+.drawer .menu a{
+  padding: 12px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.05);
+  font-weight: 800;
+  color: var(--text);
+}
+.drawer .menu a:hover{border-color: rgba(45,212,191,.28)}
+.drawer .footer{
+  margin-top: 14px;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+/* ================================
+   Hero Slider
+================================ */
+.hero{
+  padding: 22px 0 0;
+}
+.slider{
+  border-radius: var(--radius2);
+  overflow:hidden;
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: var(--shadow);
+  position:relative;
+  background: rgba(255,255,255,.03);
+}
+.slides{
+  display:flex;
+  transition: transform .6s cubic-bezier(.2,.8,.2,1);
+  will-change: transform;
+}
+.slide{
+  min-width: 100%;
+  position:relative;
+  height: 540px;
+}
+@media (max-width: 980px){
+  .slide{height: 620px}
+}
+.slide .bg{
+  position:absolute;
+  inset:0;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(1.35) contrast(1.1) saturate(1.1);
+  transform: scale(1.02);
+}
+.slide::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(11,18,32,.72) 0%,
+      rgba(11,18,32,.42) 55%,
+      rgba(11,18,32,.15) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(11,18,32,.55),
+      transparent 60%
+    );
+}
+.slide .content{
+  position:relative;
+  height:100%;
+  display:flex;
+  align-items:center;
+  padding: 26px;
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 18px;
+  align-items:center;
+  width:100%;
+}
+@media (max-width: 980px){
+  .hero-grid{grid-template-columns: 1fr}
+}
+
+.hero h1{
+  font-size: clamp(32px, 4vw, 54px);
+  line-height: 1.05;
+  letter-spacing: .2px;
+  margin-bottom: 10px;
+}
+.hero .lead{
+  font-size: 16px;
+  max-width: 56ch;
+  color: rgba(232,238,252,.9);
+}
+.hero .cta{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top: 14px;
+}
+.hero .mini{
+  display:grid;
+  gap: 12px;
+}
+.mini-card{
+  padding: 14px;
+  border-radius: var(--radius);
+  background: rgba(255,255,255,.09);
+  border: 1px solid rgba(255,255,255,.18);
+}
+.mini-card strong{display:block; margin-bottom:4px}
+.mini-card p{margin:0; font-size: 14px}
+
+.slider-controls{
+  position:absolute;
+  inset:auto 18px 18px 18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  z-index:5;
+}
+.pills{
+  display:flex;
+  gap:8px;
+}
+.pill{
+  width: 44px; height: 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.18);
+  background: rgba(255,255,255,.18);
+  cursor:pointer;
+  transition: transform .2s ease, background .2s ease;
+}
+.pill.active{background: linear-gradient(90deg, rgba(45,212,191,.9), rgba(96,165,250,.9))}
+.pill:hover{transform: scale(1.03)}
+.slider-controls .arrows{
+  display:flex;
+  gap:10px;
+}
+
+/* ================================
+   Feature / Sections
+================================ */
+.kicker{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  margin-bottom: 18px;
+}
+.kicker h2{
+  font-size: clamp(22px, 2.6vw, 34px);
+}
+.kicker .right{display:flex; gap:10px; flex-wrap:wrap; align-items:center}
+
+.icon{
+  width: 42px; height: 42px;
+  border-radius: 14px;
+  display:grid;
+  place-items:center;
+  background: rgba(45,212,191,.12);
+  border: 1px solid rgba(45,212,191,.26);
+  color: var(--text);
+  font-weight: 900;
+}
+
+.list{
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+  line-height:1.7;
+}
+.hr{
+  height:1px;
+  background: rgba(255,255,255,.10);
+  margin: 18px 0;
+}
+
+.stat{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  padding: 16px;
+  border-radius: var(--radius);
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.10);
+}
+.stat strong{font-size: 22px}
+.stat small{font-weight:700}
+
+/* ================================
+   Forms
+================================ */
+.form{
+  display:grid;
+  gap: 12px;
+}
+.field{
+  display:grid;
+  gap: 8px;
+}
+label{font-weight: 800; color: var(--text)}
+input, select, textarea{
+  width:100%;
+  padding: 12px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.06);
+  color: var(--text);
+  outline:none;
+}
+input:focus, select:focus, textarea:focus{box-shadow: var(--ring); border-color: rgba(45,212,191,.35)}
+textarea{min-height: 120px; resize: vertical}
+.helper{color: var(--muted); font-size: 13px}
+.toast{
+  display:none;
+  padding: 12px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(45,212,191,.35);
+  background: rgba(45,212,191,.10);
+  color: var(--text);
+  font-weight: 800;
+}
+.toast.error{
+  border-color: rgba(251,113,133,.45);
+  background: rgba(251,113,133,.10);
+}
+
+/* ================================
+   Footer
+================================ */
+.footer{
+  border-top: 1px solid rgba(255,255,255,.10);
+  background: rgba(0,0,0,.22);
+  padding: 44px 0;
+}
+.footer .cols{
+  display:grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 18px;
+}
+@media (max-width: 980px){
+  .footer .cols{grid-template-columns: 1fr}
+}
+.footer a{color: var(--muted); font-weight:700}
+.footer a:hover{color: var(--text)}
+.footer .copyright{
+  margin-top: 18px;
+  color: var(--muted);
+}
+
+/* ================================
+   Search Modal
+================================ */
+.search-modal{
+  position: fixed;
+  inset:0;
+  background: rgba(0,0,0,.58);
+  display:none;
+  z-index: 200;
+}
+.search-modal.open{display:block}
+.search-modal .box{
+  max-width: 860px;
+  margin: 10vh auto 0;
+  background: rgba(11,18,32,.95);
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: var(--radius2);
+  box-shadow: var(--shadow);
+  overflow:hidden;
+}
+.search-modal .top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  padding: 14px 14px;
+  border-bottom: 1px solid rgba(255,255,255,.10);
+}
+.search-modal .results{
+  padding: 14px;
+  display:grid;
+  gap:10px;
+  max-height: 60vh;
+  overflow:auto;
+}
+.result{
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.05);
+}
+.result strong{display:block; margin-bottom: 4px}
+.result small{display:block}
+
+.logo-img {
+  width: 72px;          /* bigger, more visible brand */
+  height: auto;         /* keeps proportions */
+  max-height: 72px;
+  border-radius: 14px;
+  object-fit: contain;  /* IMPORTANT: prevents cropping */
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.credentials{
+  padding: 70px 20px;
+  background: rgba(255,255,255,.04);
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.credential-logos{
+  display: grid;
+  gap: 16px;
+  margin-top: 22px;
+}
+
+.cred-card{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(0,0,0,.25);
+  border: 1px solid rgba(255,255,255,.10);
+  max-width: 560px;
+}
+
+.cred-card img{
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  border-radius: 14px;
+  background: rgba(255,255,255,.06);
+  padding: 10px;
+}
+
+.cred-text small{
+  display: block;
+  opacity: .8;
+  margin-top: 2px;
+}
+
+.fineprint{
+  margin-top: 14px;
+  font-size: .9rem;
+  opacity: .75;
+  max-width: 720px;
+}
+/* ================================
+   HERO OVERLAY BRIGHTEN (SAFE OVERRIDE)
+   Paste at VERY BOTTOM of styles.css
+================================ */
+
+/* brighten ONLY the hero background image slightly */
+.slide .bg{
+  filter: brightness(1.25) contrast(1.12) saturate(1.08) !important;
+}
+
+/* lighten the dark overlay that makes the big box look dim */
+.slide::after{
+  background:
+    linear-gradient(
+      90deg,
+      rgba(11,18,32,.55) 0%,
+      rgba(11,18,32,.30) 55%,
+      rgba(11,18,32,.12) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(11,18,32,.35),
+      transparent 65%
+    ) !important;
+}
+
+/* small readability boost (doesn't darken the panel) */
+.hero h1,
+.hero .lead{
+  text-shadow: 0 8px 24px rgba(0,0,0,.35) !important;
+}
+/* ================================
+   HERO OVERLAY — MAX BRIGHTNESS
+================================ */
+
+/* Super brighten background image */
+.slide .bg{
+  filter:
+    brightness(1.9)
+    contrast(1.25)
+    saturate(1.25)
+    blur(0)
+    !important;
+}
+
+/* Nuke the dark overlay almost completely */
+.slide::after{
+  background:
+    linear-gradient(
+      90deg,
+      rgba(11,18,32,.22) 0%,
+      rgba(11,18,32,.12) 55%,
+      rgba(11,18,32,.04) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(11,18,32,.15),
+      transparent 75%
+    ) !important;
+}
+
+/* Brighten text container background */
+.hero .content{
+  background: linear-gradient(
+    90deg,
+    rgba(0,0,0,.20),
+    rgba(0,0,0,.08)
+  ) !important;
+  border-radius: 24px;
+}
+
+/* Make text pop HARD */
+.hero h1{
+  color: #ffffff !important;
+  text-shadow:
+    0 2px 6px rgba(0,0,0,.45),
+    0 12px 40px rgba(0,0,0,.35) !important;
+}
+
+.hero .lead{
+  color: rgba(255,255,255,.92) !important;
+  text-shadow: 0 4px 18px rgba(0,0,0,.35) !important;
+}
+
+/* Brighten feature cards on the right */
+.mini-card{
+  background: rgba(255,255,255,.14) !important;
+  border-color: rgba(255,255,255,.28) !important;
+  backdrop-filter: blur(6px);
+}
+/* ===== FIX: HERO BUTTONS NOT CLICKING (overlay blocking clicks) ===== */
+.slide::after,
+.slider::before {
+  pointer-events: none !important;   /* overlay can’t block clicks */
+}
+
+.slide .content,
+.slide .content * {
+  pointer-events: auto;              /* ensure content remains clickable */
+  position: relative;
+  z-index: 5;
+}
+
+/* Optional: make sure arrows/pills also always clickable */
+.slider-controls {
+  position: relative;
+  z-index: 10;
+}
+/* ===== FIX: Make <select> dropdown options visible on dark theme ===== */
+select option {
+  color: #0b1220;          /* dark text */
+  background: #ffffff;     /* white dropdown list */
+}
+
+/* Optional: make the selected value in the closed select readable */
+select {
+  color: var(--text);
+  background-color: rgba(255,255,255,.06);
+}
+/* ================================
+   HERO BACKGROUND FIX (LESS BRIGHT)
+   Put this at the VERY BOTTOM of styles.css
+================================ */
+
+/* 1) Stop over-brightening the hero images */
+.slide .bg{
+  filter: brightness(1.0) contrast(1.05) saturate(1.05) !important;
+}
+
+/* 2) Bring back a clean dark overlay so text pops */
+.slide::after{
+  background:
+    linear-gradient(90deg,
+      rgba(11,18,32,.78) 0%,
+      rgba(11,18,32,.55) 55%,
+      rgba(11,18,32,.28) 100%),
+    linear-gradient(0deg,
+      rgba(11,18,32,.55) 0%,
+      transparent 55%) !important;
+}
+
+/* 3) If you previously added a slider::before overlay, reduce it */
+.slider::before{
+  background: linear-gradient(
+    90deg,
+    rgba(5, 20, 40, 0.25) 0%,
+    rgba(5, 20, 40, 0.10) 50%,
+    rgba(5, 20, 40, 0.05) 100%
+  ) !important;
+}
+
+/* 4) Make the mini cards readable but not faded-out */
+.mini-card{
+  background: rgba(255,255,255,.08) !important;
+  border-color: rgba(255,255,255,.16) !important;
+}
+/* ================================
+   FIX: Hero slider arrow alignment
+   ================================ */
+
+/* Make sure hero container doesn't clip controls */
+.hero,
+.hero .slider {
+  overflow: visible;
+}
+
+/* Slider controls container */
+.slider-controls {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none; /* allows clicks only on buttons */
+}
+
+/* Arrow button group */
+.slider-controls .arrows {
+  display: flex;
+  gap: 10px;
+  pointer-events: auto;
+}
+
+/* Arrow buttons */
+.slider-controls .arrows .btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,.25);
+  color: #fff;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Pills stay centered */
+.slider-controls .pills {
+  pointer-events: auto;
+}
