@@ -77,49 +77,60 @@
           <h2>Send a Message</h2>
           <p>Tell us what you need and the best way to reach you.</p>
 
-          <form class="form" data-form>
-            <div class="toast" aria-live="polite"></div>
+          <form
+  class="form"
+  action="https://formspree.io/f/xvzbgdba"
+  method="POST"
+>
+  <div class="toast" aria-live="polite"></div>
 
-            <div class="field">
-              <label for="mName">Name</label>
-              <input id="mName" name="name" type="text" placeholder="Your name" required />
-            </div>
+  <!-- Formspree email formatting / routing -->
+  <input type="hidden" name="_subject" value="New Website Message — Eagle Star Security" />
+  <input type="hidden" name="_template" value="table" />
 
-            <div class="grid two">
-              <div class="field">
-                <label for="mPhone">Phone</label>
-                <input id="mPhone" name="phone" type="tel" placeholder="(###) ###-####" required />
-              </div>
-              <div class="field">
-                <label for="mEmail">Email</label>
-                <input id="mEmail" name="email" type="email" placeholder="you@email.com" required />
-              </div>
-            </div>
+  <!-- OPTIONAL: redirect after submit (create thank-you.html if you want) -->
+  <!-- <input type="hidden" name="_next" value="https://www.eaglestarsecurity.com/thank-you.html" /> -->
 
-            <div class="field">
-              <label for="mTopic">Topic</label>
-              <select id="mTopic" name="topic" required>
-                <option value="">Select one</option>
-                <option>Security Coverage (Unarmed)</option>
-                <option>Security Coverage (Armed)</option>
-                <option>Security Training</option>
-                <option>CPR Training</option>
-                <option>Careers / Employment</option>
-                <option>Other</option>
-              </select>
-            </div>
+  <!-- OPTIONAL: spam honeypot (leave hidden via CSS) -->
+  <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none" />
 
-            <div class="field">
-              <label for="mMessage">Message</label>
-              <textarea id="mMessage" name="message" placeholder="Write your message here..." required></textarea>
-              <div class="helper">
-                Demo form — it will show success on submit, but it won’t email yet.
-                Later we can connect to email (Formspree / Netlify Forms / your host).
-              </div>
-            </div>
+  <div class="field">
+    <label for="mName">Name</label>
+    <input id="mName" name="name" type="text" placeholder="Your name" required />
+  </div>
 
-            <button class="btn primary" type="submit">Send Message</button>
-          </form>
+  <div class="grid two">
+    <div class="field">
+      <label for="mPhone">Phone</label>
+      <input id="mPhone" name="phone" type="tel" placeholder="(###) ###-####" required />
+    </div>
+    <div class="field">
+      <label for="mEmail">Email</label>
+      <input id="mEmail" name="email" type="email" placeholder="you@email.com" required />
+    </div>
+  </div>
+
+  <div class="field">
+    <label for="mTopic">Topic</label>
+    <select id="mTopic" name="topic" required>
+      <option value="">Select one</option>
+      <option value="Security Coverage (Unarmed)">Security Coverage (Unarmed)</option>
+      <option value="Security Coverage (Armed)">Security Coverage (Armed)</option>
+      <option value="Security Training">Security Training</option>
+      <option value="CPR Training">CPR Training</option>
+      <option value="Careers / Employment">Careers / Employment</option>
+      <option value="Other">Other</option>
+    </select>
+  </div>
+
+  <div class="field">
+    <label for="mMessage">Message</label>
+    <textarea id="mMessage" name="message" placeholder="Write your message here..." required></textarea>
+    <div class="helper">We typically respond within 24 hours.</div>
+  </div>
+
+  <button class="btn primary" type="submit">Send Message</button>
+</form>
         </div>
 
         <!-- Contact Details + Map Placeholder -->
@@ -209,8 +220,8 @@
         <p><a href="tel:+18039611923">📞 (803) 961-1923</a></p>
         <p>📍 529 Oxford St, Sumter, SC 29150</p>
         <p>
-          <a href="mailto:info@eaglestarsecurity.com">
-            ✉️ info@eaglestarsecurity.com
+          <a href="mailto:eglstrss@gmail.com">
+            ✉️ eglstrss@gmail.com
           </a>
         </p>
       </div>

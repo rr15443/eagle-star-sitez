@@ -150,6 +150,7 @@ small{color: var(--muted)}
   justify-content:space-between;
   gap:14px;
   padding: 14px 0;
+  min-height: 120px;
 }
 .brand{
   display:flex;
@@ -485,7 +486,7 @@ textarea{min-height: 120px; resize: vertical}
 .footer{
   border-top: 1px solid rgba(255,255,255,.10);
   background: rgba(0,0,0,.22);
-  padding: 44px 0;
+  padding: 64px 0;
 }
 .footer .cols{
   display:grid;
@@ -500,6 +501,15 @@ textarea{min-height: 120px; resize: vertical}
 .footer .copyright{
   margin-top: 18px;
   color: var(--muted);
+}
+.footer .brand {
+  gap: 14px;
+  align-items: center;
+}
+.footer .brand img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
 }
 
 /* ================================
@@ -547,13 +557,14 @@ textarea{min-height: 120px; resize: vertical}
 .result small{display:block}
 
 .logo-img {
-  width: 72px;          /* bigger, more visible brand */
-  height: auto;         /* keeps proportions */
-  max-height: 72px;
-  border-radius: 14px;
-  object-fit: contain;  /* IMPORTANT: prevents cropping */
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  width: 110px;
+  height: 110px;
+  border-radius: 22px;
+  object-fit: contain;
+  border: 2px solid rgba(255, 255, 255, 0.2);
 }
+
+
 
 .credentials{
   padding: 70px 20px;

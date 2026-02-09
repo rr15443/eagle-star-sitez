@@ -149,64 +149,75 @@
           <h2>Application Form</h2>
           <p>Submit your info and we’ll follow up if there’s a fit.</p>
 
-          <form class="form" data-form>
-            <div class="toast" aria-live="polite"></div>
+          <form
+  class="form"
+  action="https://formspree.io/f/xvzbgdba"
+  method="POST"
+>
+  <div class="toast" aria-live="polite"></div>
 
-            <div class="field">
-              <label for="aName">Full Name</label>
-              <input id="aName" name="name" type="text" placeholder="Your name" required />
-            </div>
+  <!-- Formspree email formatting / routing -->
+  <input type="hidden" name="_subject" value="New Careers Application — Eagle Star Security" />
+  <input type="hidden" name="_template" value="table" />
 
-            <div class="grid two">
-              <div class="field">
-                <label for="aPhone">Phone</label>
-                <input id="aPhone" name="phone" type="tel" placeholder="(###) ###-####" required />
-              </div>
-              <div class="field">
-                <label for="aEmail">Email</label>
-                <input id="aEmail" name="email" type="email" placeholder="you@email.com" required />
-              </div>
-            </div>
+  <!-- OPTIONAL: redirect after submit (create careers-thank-you.html if you want) -->
+  <!-- <input type="hidden" name="_next" value="https://www.eaglestarsecurity.com/careers-thank-you.html" /> -->
 
-            <div class="field">
-              <label for="aRole">Position Interested In</label>
-              <select id="aRole" name="role" required>
-                <option value="">Select one</option>
-                <option>Unarmed Security Officer</option>
-                <option>Armed Security Officer</option>
-                <option>Training Candidate</option>
-                <option>Other</option>
-              </select>
-            </div>
+  <!-- OPTIONAL: spam honeypot -->
+  <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none" />
 
-            <div class="grid two">
-              <div class="field">
-                <label for="aCity">City / Area</label>
-                <input id="aCity" name="city" type="text" placeholder="Ex: Sumter, SC" required />
-              </div>
-              <div class="field">
-                <label for="aAvailability">Availability</label>
-                <select id="aAvailability" name="availability" required>
-                  <option value="">Select one</option>
-                  <option>Days</option>
-                  <option>Nights</option>
-                  <option>Weekends</option>
-                  <option>Flexible</option>
-                </select>
-              </div>
-            </div>
+  <div class="field">
+    <label for="aName">Full Name</label>
+    <input id="aName" name="name" type="text" placeholder="Your name" required />
+  </div>
 
-            <div class="field">
-              <label for="aNotes">Short Message</label>
-              <textarea id="aNotes" name="notes" placeholder="Tell us your experience and what you're looking for..." required></textarea>
-              <div class="helper">
-                Demo form — it shows success but won’t email yet.
-                Next step is connecting it to email (Formspree / Netlify / your host).
-              </div>
-            </div>
+  <div class="grid two">
+    <div class="field">
+      <label for="aPhone">Phone</label>
+      <input id="aPhone" name="phone" type="tel" placeholder="(###) ###-####" required />
+    </div>
+    <div class="field">
+      <label for="aEmail">Email</label>
+      <input id="aEmail" name="email" type="email" placeholder="you@email.com" required />
+    </div>
+  </div>
 
-            <button class="btn primary" type="submit">Submit Application</button>
-          </form>
+  <div class="field">
+    <label for="aRole">Position Interested In</label>
+    <select id="aRole" name="role" required>
+      <option value="">Select one</option>
+      <option value="Unarmed Security Officer">Unarmed Security Officer</option>
+      <option value="Armed Security Officer">Armed Security Officer</option>
+      <option value="Training Candidate">Training Candidate</option>
+      <option value="Other">Other</option>
+    </select>
+  </div>
+
+  <div class="grid two">
+    <div class="field">
+      <label for="aCity">City / Area</label>
+      <input id="aCity" name="city" type="text" placeholder="Ex: Sumter, SC" required />
+    </div>
+    <div class="field">
+      <label for="aAvailability">Availability</label>
+      <select id="aAvailability" name="availability" required>
+        <option value="">Select one</option>
+        <option value="Days">Days</option>
+        <option value="Nights">Nights</option>
+        <option value="Weekends">Weekends</option>
+        <option value="Flexible">Flexible</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="field">
+    <label for="aNotes">Short Message</label>
+    <textarea id="aNotes" name="notes" placeholder="Tell us your experience and what you're looking for..." required></textarea>
+    <div class="helper">We typically respond within 24 hours.</div>
+  </div>
+
+  <button class="btn primary" type="submit">Submit Application</button>
+</form>
         </div>
 
       </div>
@@ -256,8 +267,8 @@
         <p><a href="tel:+18039611923">📞 (803) 961-1923</a></p>
         <p>📍 529 Oxford St, Sumter, SC 29150</p>
         <p>
-          <a href="mailto:info@eaglestarsecurity.com">
-            ✉️ info@eaglestarsecurity.com
+          <a href="mailto:eglstrss@gmail.com">
+            ✉️ eglstrss@gmail.com
           </a>
         </p>
       </div>

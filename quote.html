@@ -77,130 +77,140 @@
           <h2>Quote Request Form</h2>
           <p>Fill this out and we’ll reach back out to confirm details.</p>
 
-          <form class="form" data-form>
-            <div class="toast" aria-live="polite"></div>
+         <form
+  class="form"
+  action="https://formspree.io/f/xvzbgdba"
+  method="POST"
+>
+  <div class="toast" aria-live="polite"></div>
 
-            <div class="field">
-              <label for="qName">Full Name</label>
-              <input id="qName" name="name" type="text" placeholder="Your name" required />
-            </div>
+  <!-- Helps the email look professional -->
+  <input type="hidden" name="_subject" value="New Quote Request — Eagle Star Security">
+  <input type="hidden" name="_template" value="table">
 
-            <div class="grid two">
-              <div class="field">
-                <label for="qPhone">Phone</label>
-                <input id="qPhone" name="phone" type="tel" placeholder="(###) ###-####" required />
-              </div>
-              <div class="field">
-                <label for="qEmail">Email</label>
-                <input id="qEmail" name="email" type="email" placeholder="you@email.com" required />
-              </div>
-            </div>
+  <div class="field">
+    <label for="qName">Full Name</label>
+    <input id="qName" name="name" type="text" placeholder="Your name" required />
+  </div>
 
-            <div class="field">
-              <label for="qService">What are you requesting?</label>
-              <select id="qService" name="service" required>
-                <option value="">Select one</option>
-                <option value="unarmed">Unarmed Security Officers</option>
-                <option value="armed">Armed Security Officers</option>
-                <option value="training">Security Training (Safeguard)</option>
-                <option value="cpr">CPR Training</option>
-                <option value="consultation">Security Consultation</option>
-                <option value="unsure">Not sure yet</option>
-              </select>
-              <div class="helper">Pick the closest match — we’ll confirm details when we call/text you.</div>
-            </div>
+  <div class="grid two">
+    <div class="field">
+      <label for="qPhone">Phone</label>
+      <input id="qPhone" name="phone" type="tel" placeholder="(###) ###-####" required />
+    </div>
+    <div class="field">
+      <label for="qEmail">Email</label>
+      <input id="qEmail" name="email" type="email" placeholder="you@email.com" required />
+    </div>
+  </div>
 
-            <div class="grid two">
-              <div class="field">
-                <label for="qWhen">When do you need coverage/training?</label>
-                <select id="qWhen" name="when_needed" required>
-                  <option value="">Select one</option>
-                  <option value="asap">ASAP / Urgent</option>
-                  <option value="this_week">This week</option>
-                  <option value="next_2_weeks">Next 1–2 weeks</option>
-                  <option value="next_month">Within the next month</option>
-                  <option value="flexible">Flexible / Not sure yet</option>
-                </select>
-              </div>
+  <div class="field">
+    <label for="qService">What are you requesting?</label>
+    <select id="qService" name="service" required>
+      <option value="">Select one</option>
+      <option value="unarmed">Unarmed Security Officers</option>
+      <option value="armed">Armed Security Officers</option>
+      <option value="training">Security Training (Safeguard)</option>
+      <option value="cpr">CPR Training</option>
+      <option value="consultation">Security Consultation</option>
+      <option value="unsure">Not sure yet</option>
+    </select>
+    <div class="helper">Pick the closest match — we’ll confirm details when we call/text you.</div>
+  </div>
 
-              <div class="field">
-                <label for="qStart">Preferred Start Date (optional)</label>
-                <input id="qStart" name="start_date" type="date" />
-              </div>
-            </div>
+  <div class="grid two">
+    <div class="field">
+      <label for="qWhen">When do you need coverage/training?</label>
+      <select id="qWhen" name="when_needed" required>
+        <option value="">Select one</option>
+        <option value="asap">ASAP / Urgent</option>
+        <option value="this_week">This week</option>
+        <option value="next_2_weeks">Next 1–2 weeks</option>
+        <option value="next_month">Within the next month</option>
+        <option value="flexible">Flexible / Not sure yet</option>
+      </select>
+    </div>
 
-            <div class="grid two">
-              <div class="field">
-                <label for="qDuration">How long is coverage needed?</label>
-                <select id="qDuration" name="duration" required>
-                  <option value="">Select one</option>
-                  <option value="one_day">One day / single event</option>
-                  <option value="few_days">2–7 days</option>
-                  <option value="short_term">1–4 weeks</option>
-                  <option value="long_term">1–6 months</option>
-                  <option value="ongoing">Ongoing / long-term contract</option>
-                  <option value="unsure">Not sure yet</option>
-                </select>
-              </div>
+    <div class="field">
+      <label for="qStart">Preferred Start Date (optional)</label>
+      <input id="qStart" name="start_date" type="date" />
+    </div>
+  </div>
 
-              <div class="field">
-                <label for="qOfficers">How many officers do you need?</label>
-                <select id="qOfficers" name="officers_needed" required>
-                  <option value="">Select one</option>
-                  <option value="1">1 officer</option>
-                  <option value="2">2 officers</option>
-                  <option value="3_5">3–5 officers</option>
-                  <option value="6_10">6–10 officers</option>
-                  <option value="10_plus">10+ officers</option>
-                  <option value="unsure">Not sure yet</option>
-                </select>
-              </div>
-            </div>
+  <div class="grid two">
+    <div class="field">
+      <label for="qDuration">How long is coverage needed?</label>
+      <select id="qDuration" name="duration" required>
+        <option value="">Select one</option>
+        <option value="one_day">One day / single event</option>
+        <option value="few_days">2–7 days</option>
+        <option value="short_term">1–4 weeks</option>
+        <option value="long_term">1–6 months</option>
+        <option value="ongoing">Ongoing / long-term contract</option>
+        <option value="unsure">Not sure yet</option>
+      </select>
+    </div>
 
-            <div class="grid two">
-              <div class="field">
-                <label for="qLocation">Service Location (City/Area)</label>
-                <input id="qLocation" name="location" type="text" placeholder="Ex: Sumter, SC" required />
-              </div>
+    <div class="field">
+      <label for="qOfficers">How many officers do you need?</label>
+      <select id="qOfficers" name="officers_needed" required>
+        <option value="">Select one</option>
+        <option value="1">1 officer</option>
+        <option value="2">2 officers</option>
+        <option value="3_5">3–5 officers</option>
+        <option value="6_10">6–10 officers</option>
+        <option value="10_plus">10+ officers</option>
+        <option value="unsure">Not sure yet</option>
+      </select>
+    </div>
+  </div>
 
-              <div class="field">
-                <label for="qShift">Which shift(s)?</label>
-                <select id="qShift" name="shift" required>
-                  <option value="">Select one</option>
-                  <option value="day">Day shift</option>
-                  <option value="night">Night shift</option>
-                  <option value="both">Both day & night</option>
-                  <option value="weekends">Weekends only</option>
-                  <option value="event">Event / specific hours</option>
-                  <option value="unsure">Not sure yet</option>
-                </select>
-              </div>
-            </div>
+  <div class="grid two">
+    <div class="field">
+      <label for="qLocation">Service Location (City/Area)</label>
+      <input id="qLocation" name="location" type="text" placeholder="Ex: Sumter, SC" required />
+    </div>
 
-            <div class="field">
-              <label for="qHours">Approx. hours per day</label>
-              <select id="qHours" name="hours_per_day" required>
-                <option value="">Select one</option>
-                <option value="4">Up to 4 hours</option>
-                <option value="8">8 hours</option>
-                <option value="10_12">10–12 hours</option>
-                <option value="12_plus">12+ hours</option>
-                <option value="24">24-hour coverage</option>
-                <option value="variable">Varies / Not sure</option>
-              </select>
-            </div>
+    <div class="field">
+      <label for="qShift">Which shift(s)?</label>
+      <select id="qShift" name="shift" required>
+        <option value="">Select one</option>
+        <option value="day">Day shift</option>
+        <option value="night">Night shift</option>
+        <option value="both">Both day & night</option>
+        <option value="weekends">Weekends only</option>
+        <option value="event">Event / specific hours</option>
+        <option value="unsure">Not sure yet</option>
+      </select>
+    </div>
+  </div>
 
-            <div class="field">
-              <label for="qDetails">Details</label>
-              <textarea id="qDetails" name="details" placeholder="Tell us what you need (site type, number of officers, any concerns, training group size, preferred dates, etc.)" required></textarea>
-              <div class="helper">
-                Demo form: it will show a success message but won’t email yet.
-                Next step is connecting to email (Formspree / Netlify Forms / your website host).
-              </div>
-            </div>
+  <div class="field">
+    <label for="qHours">Approx. hours per day</label>
+    <select id="qHours" name="hours_per_day" required>
+      <option value="">Select one</option>
+      <option value="4">Up to 4 hours</option>
+      <option value="8">8 hours</option>
+      <option value="10_12">10–12 hours</option>
+      <option value="12_plus">12+ hours</option>
+      <option value="24">24-hour coverage</option>
+      <option value="variable">Varies / Not sure</option>
+    </select>
+  </div>
 
-            <button class="btn primary" type="submit">Submit Quote Request</button>
-          </form>
+  <div class="field">
+    <label for="qDetails">Details</label>
+    <textarea
+      id="qDetails"
+      name="details"
+      placeholder="Tell us what you need (site type, number of officers, any concerns, training group size, preferred dates, etc.)"
+      required
+    ></textarea>
+    <div class="helper">We typically respond within 24 hours.</div>
+  </div>
+
+  <button class="btn primary" type="submit">Submit Quote Request</button>
+</form>
         </div>
 
         <!-- Info / Contact -->
@@ -285,8 +295,8 @@
         <p><a href="tel:+18039611923">📞 (803) 961-1923</a></p>
         <p>📍 529 Oxford St, Sumter, SC 29150</p>
         <p>
-          <a href="mailto:info@eaglestarsecurity.com">
-            ✉️ info@eaglestarsecurity.com
+          <a href="mailto:eglstrss@gmail.com">
+            ✉️ eglstrss@gmail.com
           </a>
         </p>
       </div>

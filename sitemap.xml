@@ -2,48 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://yourdomain.com/</loc>
-    <priority>1.00</priority>
+    <loc>https://www.eaglestarsecuritysolutions.com/</loc>
   </url>
 
   <url>
-    <loc>https://yourdomain.com/services.html</loc>
-    <priority>0.90</priority>
+    <loc>https://www.eaglestarsecuritysolutions.com/services.html</loc>
   </url>
 
   <url>
-    <loc>https://yourdomain.com/training.html</loc>
-    <priority>0.85</priority>
+    <loc>https://www.eaglestarsecuritysolutions.com/training.html</loc>
   </url>
 
   <url>
-    <loc>https://yourdomain.com/about.html</loc>
-    <priority>0.80</priority>
+    <loc>https://www.eaglestarsecuritysolutions.com/about.html</loc>
   </url>
 
   <url>
-    <loc>https://yourdomain.com/quote.html</loc>
-    <priority>0.95</priority>
+    <loc>https://www.eaglestarsecuritysolutions.com/quote.html</loc>
   </url>
 
   <url>
-    <loc>https://yourdomain.com/contact.html</loc>
-    <priority>0.90</priority>
+    <loc>https://www.eaglestarsecuritysolutions.com/contact.html</loc>
   </url>
 
   <url>
-    <loc>https://yourdomain.com/careers.html</loc>
-    <priority>0.70</priority>
-  </url>
-
-  <url>
-    <loc>https://yourdomain.com/privacy.html</loc>
-    <priority>0.50</priority>
-  </url>
-
-  <url>
-    <loc>https://yourdomain.com/sitemap.html</loc>
-    <priority>0.40</priority>
+    <loc>https://www.eaglestarsecuritysolutions.com/careers.html</loc>
   </url>
 
 </urlset>
