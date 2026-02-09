@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://eaglestarsecurity.com/sitemap.xml
+Sitemap: https://eaglestarsecuritysolutions.com/sitemap.xml
