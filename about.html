@@ -9,11 +9,174 @@
 
   <link rel="icon" href="assets/img/logo.png" />
   <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <style>
+    .about-hero{
+      padding: 56px 0 44px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      background:
+        radial-gradient(700px 360px at 72% 35%, rgba(96,165,250,.22), transparent 60%),
+        linear-gradient(90deg, rgba(11,18,32,.78), rgba(15,26,47,.35));
+      overflow:hidden;
+    }
+
+    .about-hero .inner{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap:28px;
+      align-items:center;
+    }
+
+    .about-hero h1{
+      font-size: clamp(34px, 4vw, 56px);
+      line-height:1.05;
+    }
+
+    .about-hero-logo{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .about-hero-logo img{
+      width:min(320px, 80%);
+      opacity:.92;
+      filter: drop-shadow(0 18px 45px rgba(45,212,191,.18));
+    }
+
+    .leadership-title{
+      text-align:center;
+      margin-bottom:28px;
+      position:relative;
+    }
+
+    .leadership-title h2{
+      color:var(--brand);
+      text-transform:uppercase;
+      letter-spacing:1.5px;
+      font-size:18px;
+    }
+
+    .leadership-title p{
+      max-width:760px;
+      margin:0 auto;
+    }
+
+    .profile-card{
+      display:grid;
+      grid-template-columns: 320px 1fr;
+      gap:28px;
+      align-items:stretch;
+      padding:22px;
+      border-color: rgba(45,212,191,.24);
+      background:
+        linear-gradient(135deg, rgba(45,212,191,.06), rgba(96,165,250,.06)),
+        rgba(255,255,255,.06);
+    }
+
+    .profile-photo img{
+      height:100%;
+      min-height:360px;
+      width:100%;
+      object-fit:cover;
+      object-position:center top;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.16);
+    }
+
+    .profile-content h2{
+      font-size: clamp(26px, 3vw, 36px);
+      margin-top:10px;
+    }
+
+    .highlight-line{
+      color:var(--brand);
+      font-weight:800;
+    }
+
+    .about-feature-grid{
+      display:grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap:18px;
+    }
+
+    .about-feature-card{
+      min-height:230px;
+    }
+
+    .about-feature-card .icon{
+      margin-bottom:14px;
+      font-size:22px;
+    }
+
+    .check-list{
+      list-style:none;
+      padding:0;
+      margin:0;
+      color:var(--muted);
+      line-height:1.8;
+    }
+
+    .check-list li::before{
+      content:"✓";
+      color:var(--brand);
+      font-weight:900;
+      margin-right:8px;
+    }
+
+    .about-cta{
+      margin-top:24px;
+      padding:24px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:18px;
+      border-color:rgba(45,212,191,.24);
+      background:
+        linear-gradient(90deg, rgba(45,212,191,.09), rgba(96,165,250,.08)),
+        rgba(255,255,255,.06);
+    }
+
+    .about-cta .left{
+      display:flex;
+      align-items:center;
+      gap:16px;
+    }
+
+    .about-cta .icon{
+      width:58px;
+      height:58px;
+      font-size:28px;
+    }
+
+    .about-cta .buttons{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    @media (max-width: 980px){
+      .about-hero .inner,
+      .profile-card,
+      .about-feature-grid{
+        grid-template-columns:1fr;
+      }
+
+      .profile-photo img{
+        min-height:auto;
+        max-height:520px;
+      }
+
+      .about-cta{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-  <!-- Topbar -->
   <div class="topbar">
     <div class="container inner">
       <div class="left">
@@ -27,13 +190,12 @@
     </div>
   </div>
 
-  <!-- Header -->
   <header class="header">
     <div class="container inner">
       <a class="brand" href="index.html">
         <img src="assets/img/logo-eagle-star.png"
-          alt="Eagle Star Security Solutions LLC logo"
-          class="logo-img" />
+             alt="Eagle Star Security Solutions LLC logo"
+             class="logo-img" />
         <div class="name">
           <strong>Eagle Star Security</strong>
           <small>Armed • Unarmed • Training</small>
@@ -55,137 +217,135 @@
     </div>
   </header>
 
-  <!-- Page Intro -->
-  <section class="section">
-    <div class="container">
-      <span class="badge">👤 About Eagle Star</span>
-      <h1>Eagle Star Security Solutions LLC</h1>
-      <p class="lead">
-        Your safety is our mission. Whether you need <strong>unarmed officers</strong>, <strong>armed guards</strong>,
-        or <strong>professional security training</strong>, Eagle Star delivers protection you can see and trust.
-      </p>
+  <section class="about-hero">
+    <div class="container inner">
+      <div>
+        <span class="badge">👤 About Eagle Star</span>
+        <h1>Eagle Star Security Solutions LLC</h1>
+        <p class="lead">
+          Your safety is our mission. Whether you need <strong>unarmed officers</strong>, <strong>armed guards</strong>,
+          or <strong>professional security training</strong>, Eagle Star delivers protection you can see and trust.
+        </p>
+      </div>
+
+      <div class="about-hero-logo">
+        <img src="assets/img/logo-eagle-star.png" alt="Eagle Star Security Solutions LLC logo" />
+      </div>
     </div>
   </section>
 
-  <!-- Founder Section -->
-  <section class="section">
+  <section class="section tight">
     <div class="container">
-      <div class="grid two">
+      <div class="leadership-title">
+        <h2>👥 Meet Our Leadership Team</h2>
+        <p>
+          Eagle Star Security Solutions is led by experienced professionals whose backgrounds span executive
+          security management, military leadership, investigations, and security training.
+        </p>
+      </div>
 
-        <!-- Founder Image -->
-        <div class="card">
-          <img 
-            src="assets/img/marcus-montgomer.jpg" 
-            alt="Marcus Montgomery, Founder and Owner of Eagle Star Security Solutions"
-            style="border-radius: 18px; width: 100%; object-fit: cover;"
-          />
+      <div class="grid" style="gap:22px;">
+
+        <div class="card profile-card">
+          <div class="profile-photo">
+            <img src="assets/img/marcus-montgomer.jpg"
+                 alt="Marcus Montgomery, Founder and Owner of Eagle Star Security Solutions" />
+          </div>
+
+          <div class="profile-content">
+            <span class="badge">Founder & Owner</span>
+            <h2>Marcus Montgomery</h2>
+
+            <p>
+              Marcus Montgomery is the Founder and Owner of Eagle Star Security Solutions, a South Carolina-based
+              private security firm built on the pillars of integrity, professionalism, and proactive protection.
+              With over 20 years of experience in loss prevention, investigations, and security management,
+              Marcus has consistently delivered results—safeguarding assets, training officers, and leading
+              high-impact protection programs for major corporations.
+            </p>
+
+            <p>
+              As a SLED Safeguard Certified Instructor, Marcus provides expert training for both armed and unarmed officers,
+              specializing in threat assessment, situational awareness, and professional conduct. His hands-on
+              leadership style ensures every officer is not only compliant, but confident and mission-ready in
+              any environment.
+            </p>
+
+            <p>
+              Marcus holds an MBA from the University of Phoenix and a Bachelor’s degree in Criminal Justice from
+              ITT Technical Institute, blending academic insight with real-world expertise gained from top-tier
+              organizations including Amazon, JCPenney, CVS, Belk, and Brinks Armor.
+            </p>
+
+            <p>
+              His career highlights include managing multimillion-dollar security budgets, leading workplace
+              violence investigations, and implementing strategies that significantly reduced theft and
+              improved operational safety.
+            </p>
+
+            <p>
+              Through Eagle Star Security Solutions, Marcus continues his mission to raise the bar for private
+              security in South Carolina—building professional teams that protect people, property, and peace
+              of mind.
+            </p>
+
+            <p class="highlight-line">
+              Security isn’t just a service—it’s a standard. Let Eagle Star be your trusted shield.
+            </p>
+          </div>
         </div>
 
-        <!-- Founder Bio -->
-        <div class="card">
-          <span class="badge">Founder & Owner</span>
-          <h2>Marcus Montgomery</h2>
+        <div class="card profile-card">
+          <div class="profile-photo">
+            <img src="assets/img/anthony-green.jpg"
+                 alt="Master Gunnery Sergeant Anthony U. Greene, USMC (Ret.)" />
+          </div>
 
-          <p>
-            Marcus Montgomery is the Founder and Owner of Eagle Star Security Solutions, a South Carolina-based
-            private security firm built on the pillars of integrity, professionalism, and proactive protection.
-            With over 20 years of experience in loss prevention, investigations, and security management,
-            Marcus has consistently delivered results—safeguarding assets, training officers, and leading
-            high-impact protection programs for major corporations.
-          </p>
+          <div class="profile-content">
+            <span class="badge">Director of Executive Protection</span>
+            <h2>Master Gunnery Sergeant Anthony U. Greene, USMC (Ret.)</h2>
 
-          <p>
-            As a SLED Safeguard Certified Instructor, Marcus provides expert training for both armed and unarmed officers,
-            specializing in threat assessment, situational awareness, and professional conduct. His hands-on
-            leadership style ensures every officer is not only compliant, but confident and mission-ready in
-            any environment.
-          </p>
+            <p>
+              Master Gunnery Sergeant (MGySgt) Anthony U. Greene proudly served more than 30 years in the United States Marine Corps, achieving the prestigious enlisted rank of Master Gunnery Sergeant (E-9). Throughout his distinguished career, he led Marines in combat, trained future leaders, and held senior operational leadership positions around the world.
+            </p>
 
-          <p>
-            Marcus holds an MBA from the University of Phoenix and a Bachelor’s degree in Criminal Justice from
-            ITT Technical Institute, blending academic insight with real-world expertise gained from top-tier
-            organizations including Amazon, JCPenney, CVS, Belk, and Brinks Armor.
-          </p>
+            <p>
+              MGySgt Greene completed recruit training at Marine Corps Recruit Depot Parris Island before earning Military Occupational Specialties as an Infantry Rifleman (0311) and Marine Corps Security Guard (8511). His advanced military education includes the School of Infantry, Drill Instructor School, Staff Noncommissioned Officer Academy, Advanced Course, Infantry Operations Chief Course, and Operations & Tactics Instructor Course.
+            </p>
 
-          <p>
-            His career highlights include managing multimillion-dollar security budgets, leading workplace
-            violence investigations, and implementing strategies that significantly reduced theft and
-            improved operational safety.
-          </p>
+            <p>
+              His operational experience includes deployments in support of Operation Desert Storm, Operation Deny Flight, combat operations in Iraq, and multiple deployments to Afghanistan, while serving in key leadership roles including Platoon Sergeant, Operations Chief, Company First Sergeant, Battalion Operations Chief, MEU Operations Chief, and instructor for the Marine Corps’ Staff Noncommissioned Officers Academy.
+            </p>
 
-          <p>
-            Through Eagle Star Security Solutions, Marcus continues his mission to raise the bar for private
-            security in South Carolina—building professional teams that protect people, property, and peace
-            of mind.
-          </p>
+            <p>
+              Throughout his career, MGySgt Greene trained and mentored hundreds of Marines in leadership, infantry tactics, weapons employment, security operations, operational planning, and combat readiness. His service earned numerous military decorations, including the Joint Service Commendation Medal, Navy and Marine Corps Commendation Medal, Navy and Marine Corps Achievement Medal, Combat Action Ribbon, and multiple Good Conduct Awards.
+            </p>
 
-          <p><strong>
-            Security isn’t just a service—it’s a standard. Let Eagle Star be your trusted shield.
-          </strong></p>
+            <p>
+              Today, Master Gunnery Sergeant Greene continues to share his decades of military leadership, operational expertise, and instructional experience to develop the next generation of security professionals and leaders.
+            </p>
+          </div>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- Executive Leadership Section -->
   <section class="section tight">
     <div class="container">
-      <div class="grid two">
+      <div class="about-feature-grid">
 
-        <!-- Anthony Greene Image -->
-        <div class="card">
-          <img 
-            src="assets/img/anthony-green.jpg" 
-            alt="Master Gunnery Sergeant Anthony U. Greene, USMC (Ret.)"
-            style="border-radius: 18px; width: 100%; object-fit: cover;"
-          />
-        </div>
-
-        <!-- Anthony Greene Bio -->
-        <div class="card">
-          <span class="badge">Director of Executive Protection</span>
-          <h2>Master Gunnery Sergeant Anthony U. Greene, USMC (Ret.)</h2>
-
+        <div class="card hover about-feature-card">
+          <div class="icon">👤</div>
+          <h3>Who We Are</h3>
           <p>
-            Master Gunnery Sergeant (MGySgt) Anthony U. Greene proudly served more than 30 years in the United States Marine Corps, achieving the prestigious enlisted rank of Master Gunnery Sergeant (E-9). Throughout his distinguished career, he led Marines in combat, trained future leaders, and held senior operational leadership positions around the world.
-          </p>
-
-          <p>
-            MGySgt Greene completed recruit training at Marine Corps Recruit Depot Parris Island before earning Military Occupational Specialties as an Infantry Rifleman (0311) and Marine Corps Security Guard (8511). His advanced military education includes the School of Infantry, Drill Instructor School, Staff Noncommissioned Officer Academy, Advanced Course, Infantry Operations Chief Course, and Operations & Tactics Instructor Course.
-          </p>
-
-          <p>
-            His operational experience includes deployments in support of Operation Desert Storm, Operation Deny Flight, combat operations in Iraq, and multiple deployments to Afghanistan, while serving in key leadership roles including Platoon Sergeant, Operations Chief, Company First Sergeant, Battalion Operations Chief, MEU Operations Chief, and instructor for the Marine Corps’ Staff Noncommissioned Officers Academy.
-          </p>
-
-          <p>
-            Throughout his career, MGySgt Greene trained and mentored hundreds of Marines in leadership, infantry tactics, weapons employment, security operations, operational planning, and combat readiness. His service earned numerous military decorations, including the Joint Service Commendation Medal, Navy and Marine Corps Commendation Medal, Navy and Marine Corps Achievement Medal, Combat Action Ribbon, and multiple Good Conduct Awards.
-          </p>
-
-          <p>
-            Today, Master Gunnery Sergeant Greene continues to share his decades of military leadership, operational expertise, and instructional experience to develop the next generation of security professionals and leaders.
+            We provide highly trained, reliable, and professional security officers who are prepared to safeguard
+            your business, property, and people with excellence.
           </p>
         </div>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- Mission / Who We Are -->
-  <section class="section tight">
-    <div class="container">
-      <div class="grid two">
-        <div class="card">
-          <h2>Who We Are</h2>
-          <p>
-            We provide <strong>highly trained, reliable, and professional security officers</strong> who are prepared
-            to safeguard your business, property, and people with excellence. Every Eagle Star officer—armed or unarmed—
-            is carefully selected, thoroughly vetted, and trained to respond with confidence, discipline, and integrity.
-          </p>
-
-          <div class="hr"></div>
-
+        <div class="card hover about-feature-card">
+          <div class="icon">🎯</div>
           <h3>Our Mission</h3>
           <p>
             To deliver professional security coverage and training that protects people, prevents loss,
@@ -193,66 +353,23 @@
           </p>
         </div>
 
-        <div class="card">
-          <h2>What You Can Expect</h2>
-          <ul class="list">
-            <li><strong>Professional presence</strong> that represents your business the right way</li>
-            <li><strong>Reliable coverage</strong> with clear communication and accountability</li>
-            <li><strong>Training-first culture</strong> that develops confident officers</li>
-            <li><strong>Prepared response</strong> with discipline and good judgment</li>
-            <li><strong>Accurate reporting</strong> and documentation</li>
+        <div class="card hover about-feature-card">
+          <div class="icon">🛡️</div>
+          <h3>Core Values</h3>
+          <ul class="check-list">
+            <li>Integrity in Everything We Do</li>
+            <li>Respect for Our Clients & Community</li>
+            <li>Professionalism in Every Action</li>
+            <li>Vigilance in Every Environment</li>
           </ul>
-
-          <div class="hr"></div>
-
-          <div class="cta">
-            <a class="btn primary" href="services.html">View Services</a>
-            <a class="btn" href="training.html">Training Programs</a>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Core Values -->
-  <section class="section">
-    <div class="container">
-      <div class="kicker">
-        <div>
-          <h2>Core Values</h2>
-          <p>How we operate on every site, every shift.</p>
-        </div>
-      </div>
-
-      <div class="grid three">
-        <div class="card hover">
-          <div class="icon">🧭</div>
-          <h3>Integrity</h3>
-          <p>Doing the right thing, even when no one is watching.</p>
-        </div>
-        <div class="card hover">
-          <div class="icon">🧱</div>
-          <h3>Discipline</h3>
-          <p>Professional standards, consistent procedures, and readiness.</p>
-        </div>
-        <div class="card hover">
-          <div class="icon">🤝</div>
-          <h3>Respect</h3>
-          <p>Clear communication and calm, professional interaction.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Where We Serve + Contact -->
-  <section class="section tight">
-    <div class="container">
-      <div class="grid two">
-        <div class="card">
-          <h2>Service Area</h2>
+        <div class="card hover about-feature-card">
+          <div class="icon">📍</div>
+          <h3>Service Area</h3>
           <p>
-            Based in <strong>Sumter, South Carolina</strong>, Eagle Star provides security services and training
-            for individuals, businesses, and organizations throughout the region.
+            Based in <strong>Sumter, South Carolina</strong>, we provide security services and training for
+            individuals, businesses, and organizations throughout the region.
           </p>
           <ul class="list">
             <li>Unarmed security coverage</li>
@@ -262,24 +379,25 @@
           </ul>
         </div>
 
-        <div class="card">
-          <h2>Contact</h2>
-          <p><strong>Owner:</strong> Marcus Montgomery</p>
-          <p><strong>Phone:</strong> <a href="tel:+18039611923">(803) 961-1923</a></p>
-          <p><strong>Address:</strong> 529 Oxford St, Sumter, SC 29150</p>
+      </div>
 
-          <div class="hr"></div>
-
-          <div class="cta">
-            <a class="btn primary" href="quote.html">Request a Quote</a>
-            <a class="btn" href="contact.html">Send a Message</a>
+      <div class="card about-cta">
+        <div class="left">
+          <div class="icon">🛡️</div>
+          <div>
+            <h2>Ready to Secure What Matters Most?</h2>
+            <p>Get in touch today for a free, no-obligation quote.</p>
           </div>
+        </div>
+
+        <div class="buttons">
+          <a class="btn primary" href="quote.html">Request a Quote →</a>
+          <a class="btn" href="contact.html">Contact Us →</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="cols">
@@ -302,6 +420,7 @@
 
         <div>
           <h3>Pages</h3>
+          <p><a href="index.html">Home</a></p>
           <p><a href="services.html">Services</a></p>
           <p><a href="training.html">Training</a></p>
           <p><a href="about.html">About</a></p>
@@ -312,19 +431,16 @@
           <h3>Get Started</h3>
           <p><a href="quote.html">Request a Quote</a></p>
           <p><a href="careers.html">Careers</a></p>
-          <p><a href="privacy.html">Privacy</a></p>
+          <p><a href="privacy.html">Privacy Policy</a></p>
+          <p><a href="terms.html">Terms of Service</a></p>
           <p><a href="sitemap.html">Sitemap</a></p>
         </div>
 
         <div>
           <h3>Contact</h3>
           <p><a href="tel:+18039611923">📞 (803) 961-1923</a></p>
+          <p><a href="mailto:eglstrss@gmail.com">✉️ eglstrss@gmail.com</a></p>
           <p>📍 529 Oxford St, Sumter, SC 29150</p>
-          <p>
-            <a href="mailto:eglstrss@gmail.com">
-              ✉️ eglstrss@gmail.com
-            </a>
-          </p>
         </div>
 
       </div>
